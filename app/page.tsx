@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { FloatingBackground } from "@/components/floating-background"
+import { FloatingTokens } from "@/components/floating-tokens"
 import { HeroSection } from "@/components/hero-section"
 import { StatsSection } from "@/components/stats-section"
 import { FeaturesSection } from "@/components/features-section"
@@ -13,6 +14,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-black text-white overflow-hidden gradient-mesh noise-bg relative" suppressHydrationWarning>
       <ClientOnly>
         <FloatingBackground />
+        <FloatingTokens />
         <StatusNotification />
       </ClientOnly>
       <Navigation />

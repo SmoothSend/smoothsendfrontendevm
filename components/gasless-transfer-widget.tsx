@@ -676,15 +676,17 @@ export function GaslessTransferWidget() {
   // If transfer was successful, show result
   if (transferResult && currentTokenConfig) {
     return (
-      <Card className="w-full max-w-lg mx-auto bg-black/40 backdrop-blur-3xl border border-emerald-500/30 shadow-2xl shadow-emerald-500/20">
+      <Card className="w-full max-w-lg mx-auto bg-black/40 backdrop-blur-3xl border-2 border-[#0db059]/40 shadow-2xl shadow-[#0db059]/30">
         <div className="p-6 space-y-6">
           <div className="text-center space-y-2">
-            <CheckCircle className="w-16 h-16 text-emerald-400 mx-auto" />
+            <div className="relative w-16 h-16 mx-auto">
+              <CheckCircle className="w-16 h-16 text-[#0db059] mx-auto drop-shadow-[0_0_15px_rgba(13,176,89,0.6)]" />
+            </div>
             <h3 className="text-2xl font-bold text-white">Transfer Complete!</h3>
             <p className="text-gray-300">Your gasless {selectedToken} transfer was successful</p>
           </div>
 
-          <div className="space-y-4 bg-emerald-950/30 rounded-xl p-4 border border-emerald-500/20">
+          <div className="space-y-4 bg-[#0db059]/10 rounded-xl p-4 border-2 border-[#0db059]/30">
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div>
                 <span className="text-gray-400">Amount:</span>
@@ -721,7 +723,7 @@ export function GaslessTransferWidget() {
           <div className="flex flex-col sm:flex-row gap-3">
             <Button
               onClick={() => window.open(transferResult.explorerUrl, '_blank')}
-              className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white flex items-center gap-2"
+              className="flex-1 bg-[#0db059] hover:bg-[#0a9048] text-white flex items-center gap-2 shadow-lg shadow-[#0db059]/30"
             >
               View Transaction
               <ExternalLink className="w-4 h-4" />
@@ -751,7 +753,7 @@ export function GaslessTransferWidget() {
         {/* Connection Status */}
         {!isConnected ? (
           <div className="text-center space-y-4">
-            <Wallet className="w-12 h-12 text-emerald-400 mx-auto" />
+            <Wallet className="w-12 h-12 text-[#10b981] mx-auto" />
             <div className="space-y-2">
               <p className="text-white font-semibold">Connect Your Wallet</p>
               <p className="text-gray-400 text-sm">Connect MetaMask to start sending tokens without gas fees</p>
@@ -759,7 +761,7 @@ export function GaslessTransferWidget() {
             <Button
               onClick={connectWallet}
               disabled={isConnecting}
-              className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-semibold py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
+              className="w-full bg-gradient-to-r from-[#10b981] via-[#14b8a6] to-[#06b6d4] hover:from-[#059669] hover:via-[#0f9b8e] hover:to-[#0891b2] text-white font-semibold py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
             >
               {isConnecting ? (
                 <>

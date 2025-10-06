@@ -49,6 +49,18 @@ const config: Config = {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
+  			},
+  			// SmoothSend Brand Colors
+  			smoothsend: {
+  				primary: '#10b981',        // Emerald - main brand
+  				'primary-dark': '#059669', // Emerald 600 - hover
+  				'primary-light': '#34d399',// Emerald 400 - highlights
+  				success: '#0db059',        // Vibrant green - success states
+  				accent: '#14b8a6',         // Teal - secondary actions
+  				cyan: '#06b6d4',           // Cyan - flow/movement
+  				'bg-dark': '#0a0a0a',      // Pure black
+  				'bg-card': '#1a1a1a',      // Card backgrounds
+  				'bg-hover': '#2a2a2a',     // Hover states
   			}
   		},
   		borderRadius: {

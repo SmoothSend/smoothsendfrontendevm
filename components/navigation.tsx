@@ -40,10 +40,11 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center space-x-2 flex-shrink-0">
-            <div
-              className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 via-teal-500 to-green-500 shadow-lg"
-              aria-hidden="true"
-            ></div>
+            <img 
+              src="/smoothsendlogo.png" 
+              alt="SmoothSend Logo" 
+              className="w-8 h-8 rounded-full shadow-lg"
+            />
             <span className="text-xl font-bold text-white">SmoothSend</span>
           </div>
 
@@ -79,7 +80,7 @@ export function Navigation() {
             <Button
               onClick={handleConnectWallet}
               disabled={isConnecting}
-              className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 focus-visible-emerald active:scale-95 flex items-center gap-2 px-4 py-2"
+              className="bg-gradient-to-r from-[#10b981] via-[#14b8a6] to-[#06b6d4] hover:from-[#059669] hover:via-[#0f9b8e] hover:to-[#0891b2] text-white shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 focus-visible-emerald active:scale-95 flex items-center gap-2 px-4 py-2"
               aria-label={isConnected ? "Disconnect wallet" : "Connect wallet to start gasless transfers"}
             >
               {isConnecting ? (
@@ -141,7 +142,7 @@ export function Navigation() {
                   setIsMenuOpen(false)
                 }}
                 disabled={isConnecting}
-                className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 focus-visible-emerald active:scale-95 flex items-center justify-start gap-2 mt-2"
+                className="bg-gradient-to-r from-[#10b981] via-[#14b8a6] to-[#06b6d4] hover:from-[#059669] hover:via-[#0f9b8e] hover:to-[#0891b2] text-white shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 focus-visible-emerald active:scale-95 flex items-center justify-start gap-2 mt-2"
                 aria-label={isConnected ? "Disconnect wallet" : "Connect wallet to start gasless transfers"}
               >
                 {isConnecting ? (

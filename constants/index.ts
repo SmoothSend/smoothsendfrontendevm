@@ -15,7 +15,7 @@ export const NETWORKS = {
     chainIdHex: '0x14a34',
     name: 'Base Sepolia',
     shortName: 'Base',
-    rpcUrl: 'https://sepolia.base.org',
+  rpcUrl: process.env.NEXT_PUBLIC_BASE_TESTNET_RPC_URL || 'https://sepolia.base.org',
     explorerUrl: 'https://sepolia.basescan.org',
     nativeToken: {
       name: 'Ethereum',
@@ -31,7 +31,7 @@ export const NETWORKS = {
     chainIdHex: '0x66eee',
     name: 'Arbitrum Sepolia',
     shortName: 'Arbitrum',
-    rpcUrl: 'https://sepolia-rollup.arbitrum.io/rpc',
+  rpcUrl: process.env.NEXT_PUBLIC_ARBITRUM_TESTNET_RPC_URL || 'https://sepolia-rollup.arbitrum.io/rpc',
     explorerUrl: 'https://sepolia.arbiscan.io',
     nativeToken: {
       name: 'Ethereum',
@@ -47,7 +47,7 @@ export const NETWORKS = {
     chainIdHex: '0xa869',
     name: 'Avalanche Fuji',
     shortName: 'Avalanche',
-    rpcUrl: 'https://api.avax-test.network/ext/bc/C/rpc',
+  rpcUrl: process.env.NEXT_PUBLIC_AVALANCHE_TESTNET_RPC_URL || 'https://api.avax-test.network/ext/bc/C/rpc',
     explorerUrl: 'https://testnet.snowtrace.io',
     nativeToken: {
       name: 'AVAX',

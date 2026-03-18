@@ -12,21 +12,13 @@ export const NetworkSelector: React.FC<NetworkSelectorProps> = ({
 }) => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-      <label style={{ fontSize: '14px', fontWeight: 500, color: '#374151' }}>
+      <label className="text-sm font-medium text-gray-300">
         Network
       </label>
       <select
         value={selectedChain}
         onChange={(e) => onChainChange(e.target.value as keyof typeof NETWORKS)}
-        style={{
-          padding: '12px 16px',
-          fontSize: '14px',
-          border: '1px solid #d1d5db',
-          borderRadius: '8px',
-          backgroundColor: 'white',
-          cursor: 'pointer',
-          outline: 'none',
-        }}
+        className="w-full px-4 py-3 rounded-lg phantom-input bg-black/40 text-white appearance-none cursor-pointer"
       >
         {Object.entries(NETWORKS).map(([key, network]) => (
           <option key={key} value={key} disabled={!network.enabled}>
@@ -34,7 +26,7 @@ export const NetworkSelector: React.FC<NetworkSelectorProps> = ({
           </option>
         ))}
       </select>
-      <div style={{ fontSize: '12px', color: '#6b7280' }}>
+      <div className="text-xs text-gray-400">
         Fee: {NETWORKS[selectedChain].feePercent}% • Chain ID: {NETWORKS[selectedChain].chainId}
       </div>
     </div>

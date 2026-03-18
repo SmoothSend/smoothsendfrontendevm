@@ -30,10 +30,10 @@ export function ProtocolStats() {
       <Container maxWidth="4xl">
         <div className="flex items-center justify-center space-x-2 mb-8">
           <div 
-            className="w-3 h-3 bg-emerald-500 rounded-full animate-pulse" 
+            className="w-3 h-3 bg-primary rounded-full animate-pulse" 
             aria-hidden="true"
           ></div>
-          <span className="text-emerald-300/80 font-medium">
+          <span className="text-primary/80 font-medium">
             Gasless Transfer Network stats
           </span>
         </div>
@@ -46,7 +46,7 @@ export function ProtocolStats() {
               label={stat.label}
               ariaLabel={stat.ariaLabel}
               className={index === 3 ? "md:col-span-2 lg:col-span-1" : ""}
-              valueClassName={index === 2 ? "text-emerald-400" : ""}
+              valueClassName={index === 2 ? "text-primary" : ""}
             />
           ))}
         </div>

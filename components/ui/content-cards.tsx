@@ -24,7 +24,7 @@ export function StatsCard({
   return (
     <div
       className={cn(
-        "stats-card text-center shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300 hover:scale-105 active:scale-95",
+        "stats-card text-center shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:scale-105 active:scale-95",
         className
       )}
       role="listitem"
@@ -60,45 +60,45 @@ export function FeatureCard({
 }: FeatureCardProps) {
   const variantClasses = {
     teal: {
-      border: "border-teal-500/30 hover:border-teal-400/40",
-      gradient: "from-teal-500/5 to-transparent group-hover:from-teal-500/10",
-      iconBg: "from-teal-400 to-emerald-600",
-      badgeColor: "text-teal-400",
-      titleColor: "text-teal-300",
-      descColor: "text-teal-200",
-      buttonBorder: "border-teal-400/50",
-      buttonText: "text-teal-400 hover:text-teal-300",
-      buttonBg: "hover:bg-teal-500/20",
-      shadow: "hover:shadow-teal-500/10"
+      border: "border-accent/30 hover:border-accent/40",
+      gradient: "from-accent/5 to-transparent group-hover:from-accent/10",
+      iconBg: "from-accent to-primary",
+      badgeColor: "text-accent",
+      titleColor: "text-accent",
+      descColor: "text-accent",
+      buttonBorder: "border-accent/50",
+      buttonText: "text-accent hover:text-accent",
+      buttonBg: "hover:bg-accent/20",
+      shadow: "hover:shadow-accent/10"
     },
     emerald: {
-      border: "border-emerald-500/30 hover:border-emerald-400/40",
-      gradient: "from-emerald-500/5 to-transparent group-hover:from-emerald-500/10",
-      iconBg: "from-emerald-400 to-green-600",
-      badgeColor: "text-emerald-400",
-      titleColor: "text-emerald-300",
-      descColor: "text-emerald-200",
-      buttonBorder: "border-emerald-400/50",
-      buttonText: "text-emerald-400 hover:text-emerald-300",
-      buttonBg: "hover:bg-emerald-500/20",
-      shadow: "hover:shadow-emerald-500/10"
+      border: "border-primary/30 hover:border-primary/40",
+      gradient: "from-primary/5 to-transparent group-hover:from-primary/10",
+      iconBg: "from-primary to-primary",
+      badgeColor: "text-primary",
+      titleColor: "text-primary",
+      descColor: "text-primary",
+      buttonBorder: "border-primary/50",
+      buttonText: "text-primary hover:text-primary",
+      buttonBg: "hover:bg-primary/20",
+      shadow: "hover:shadow-primary/10"
     },
     green: {
-      border: "border-green-500/30 hover:border-green-400/40",
-      gradient: "from-green-500/5 to-transparent group-hover:from-green-500/10",
-      iconBg: "from-green-400 to-emerald-600",
-      badgeColor: "text-green-400",
-      titleColor: "text-green-300",
-      descColor: "text-green-200",
-      buttonBorder: "border-green-400/50",
-      buttonText: "text-green-400 hover:text-green-300",
-      buttonBg: "hover:bg-green-500/20",
-      shadow: "hover:shadow-green-500/10"
+      border: "border-primary/30 hover:border-primary/40",
+      gradient: "from-primary/5 to-transparent group-hover:from-primary/10",
+      iconBg: "from-primary to-primary",
+      badgeColor: "text-primary",
+      titleColor: "text-primary",
+      descColor: "text-primary",
+      buttonBorder: "border-primary/50",
+      buttonText: "text-primary hover:text-primary",
+      buttonBg: "hover:bg-primary/20",
+      shadow: "hover:shadow-primary/10"
     },
     blue: {
       border: "border-blue-500/30 hover:border-blue-400/40",
       gradient: "from-blue-500/5 to-transparent group-hover:from-blue-500/10",
-      iconBg: "from-blue-400 to-cyan-600",
+      iconBg: "from-blue-400 to-accent",
       badgeColor: "text-blue-400",
       titleColor: "text-blue-300",
       descColor: "text-blue-200",

@@ -14,8 +14,8 @@ export function LoadingSpinner({ size = "md", color = "emerald", className = "" 
   }
 
   const colorClasses = {
-    emerald: "border-emerald-500",
-    teal: "border-teal-500",
+    emerald: "border-primary",
+    teal: "border-accent",
     white: "border-white"
   }
 

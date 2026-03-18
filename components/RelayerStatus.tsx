@@ -68,19 +68,19 @@ export function RelayerStatus({ className = '' }: RelayerStatusProps) {
       <div className="relative">
         {/* Pulsing ring animation when online */}
         {isOnline && (
-          <div className="absolute inset-0 rounded-full bg-emerald-400 animate-ping opacity-75"></div>
+          <div className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75"></div>
         )}
         {/* Status dot */}
         <div 
           className={`relative w-2 h-2 rounded-full ${
             isOnline 
-              ? 'bg-emerald-400 shadow-lg shadow-emerald-500/50' 
+              ? 'bg-primary shadow-lg shadow-primary/50' 
               : 'bg-red-400 shadow-lg shadow-red-500/50'
           }`}
         ></div>
       </div>
       <span className={`text-xs hidden sm:inline ${
-        isOnline ? 'text-emerald-400' : 'text-red-400'
+        isOnline ? 'text-primary' : 'text-red-400'
       }`}>
         {isOnline ? 'Online' : 'Offline'}
       </span>

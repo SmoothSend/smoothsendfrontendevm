@@ -40,11 +40,16 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center space-x-2 flex-shrink-0">
-            <img 
-              src="/smoothsendlogo.png" 
-              alt="SmoothSend Logo" 
-              className="w-8 h-8 rounded-full shadow-lg"
-            />
+            <picture>
+              <source media="(prefers-color-scheme: dark)" srcSet="/Logo Dark.png" />
+              <img
+                src="/Logo Light.png"
+                alt="SmoothSend Logo"
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
+            </picture>
             <span className="text-xl font-bold text-white">SmoothSend</span>
           </div>
 
@@ -55,7 +60,7 @@ export function Navigation() {
                 <Button
                   key={item.label}
                   variant="ghost"
-                  className="text-white hover:text-emerald-400 hover:bg-white/10 transition-all duration-200 hover:shadow-lg hover:scale-105 focus-visible-emerald px-4 py-2"
+                  className="text-white hover:text-primary hover:bg-white/10 transition-all duration-200 hover:shadow-lg hover:scale-105 focus-visible-emerald px-4 py-2"
                   aria-label={item.description}
                   onClick={() => {
                     const element = document.getElementById(item.href.substring(1))
@@ -105,7 +110,7 @@ export function Navigation() {
             <Button
               variant="ghost"
               onClick={toggleMenu}
-              className="md:hidden text-white hover:text-emerald-400 transition-colors focus-visible-emerald p-2"
+              className="md:hidden text-white hover:text-primary transition-colors focus-visible-emerald p-2"
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMenuOpen}
             >
@@ -129,7 +134,7 @@ export function Navigation() {
                     }
                     setIsMenuOpen(false) // Close menu after navigation
                   }}
-                  className="text-white hover:text-emerald-400 hover:bg-white/10 justify-start focus-visible-emerald"
+                  className="text-white hover:text-primary hover:bg-white/10 justify-start focus-visible-emerald"
                   aria-label={item.description}
                 >
                   {item.label}

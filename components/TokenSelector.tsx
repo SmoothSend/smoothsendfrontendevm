@@ -16,30 +16,20 @@ export const TokenSelector: React.FC<TokenSelectorProps> = ({
   const tokenList = Object.entries(availableTokens);
 
   if (tokenList.length === 0) {
-    return (
-      <div style={{ padding: '12px', color: '#9ca3af', fontSize: '14px' }}>
+      <div className="p-3 text-gray-400 text-sm">
         No tokens available on this network
       </div>
-    );
   }
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-      <label style={{ fontSize: '14px', fontWeight: 500, color: '#374151' }}>
+      <label className="text-sm font-medium text-gray-300">
         Token
       </label>
       <select
         value={selectedToken}
         onChange={(e) => onTokenChange(e.target.value)}
-        style={{
-          padding: '12px 16px',
-          fontSize: '14px',
-          border: '1px solid #d1d5db',
-          borderRadius: '8px',
-          backgroundColor: 'white',
-          cursor: 'pointer',
-          outline: 'none',
-        }}
+        className="w-full px-4 py-3 rounded-lg phantom-input bg-black/40 text-white appearance-none cursor-pointer"
       >
         {tokenList.map(([symbol, token]) => (
           <option key={symbol} value={symbol}>
@@ -47,7 +37,7 @@ export const TokenSelector: React.FC<TokenSelectorProps> = ({
           </option>
         ))}
       </select>
-      <div style={{ fontSize: '12px', color: '#6b7280' }}>
+      <div className="text-xs text-gray-400">
         {tokenList.find(([s]) => s === selectedToken)?.[1]?.decimals} decimals
       </div>
     </div>

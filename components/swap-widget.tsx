@@ -53,7 +53,7 @@ export function SwapWidget() {
       role="region"
       aria-label="Token swap interface"
     >
-      <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-emerald-500/20 via-teal-500/10 to-green-500/20 p-[1px]">
+      <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/20 via-accent/10 to-primary/20 p-[1px]">
         <div className="w-full h-full rounded-xl bg-black/40 backdrop-blur-xl"></div>
       </div>
 
@@ -70,7 +70,7 @@ export function SwapWidget() {
             </div>
           </div>
           
-          <div className="group bg-black/20 backdrop-blur-sm rounded-xl p-4 border border-white/5 hover:border-white/10 transition-all duration-200 focus-within:border-emerald-400/50 focus-within:ring-2 focus-within:ring-emerald-400/20">
+          <div className="group bg-black/20 backdrop-blur-sm rounded-xl p-4 border border-white/5 hover:border-white/10 transition-all duration-200 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20">
             <div className="flex items-center space-x-3">
               <div className="flex-1">
                 <Input
@@ -91,12 +91,12 @@ export function SwapWidget() {
               
               <Button
                 variant="outline"
-                className="bg-gradient-to-r from-teal-500 to-emerald-600 border-teal-500/50 text-white hover:from-teal-600 hover:to-emerald-700 backdrop-blur-sm transition-all duration-200 hover:shadow-lg hover:scale-105 focus-visible-emerald active:scale-95 px-4 py-2"
+                className="bg-gradient-to-r from-accent to-primary border-accent/50 text-white hover:from-accent hover:to-primary backdrop-blur-sm transition-all duration-200 hover:shadow-lg hover:scale-105 focus-visible-emerald active:scale-95 px-4 py-2"
                 aria-label={`Select token to sell, currently ${sellToken.name}`}
               >
                 <div className="flex items-center space-x-2">
                   <div
-                    className="w-5 h-5 rounded-full bg-gradient-to-br from-teal-300 to-emerald-500"
+                    className="w-5 h-5 rounded-full bg-gradient-to-br from-accent to-primary"
                     aria-hidden="true"
                   ></div>
                   <span className="font-medium">{sellToken.symbol}</span>
@@ -122,7 +122,7 @@ export function SwapWidget() {
           
           {/* Swap rate info */}
           {hasValidSwap && (
-            <div className="absolute left-16 top-1/2 -translate-y-1/2 flex items-center space-x-1 text-xs text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded-full">
+            <div className="absolute left-16 top-1/2 -translate-y-1/2 flex items-center space-x-1 text-xs text-primary bg-primary/10 px-2 py-1 rounded-full">
               <Info className="w-3 h-3" />
               <span>1 ETH ≈ 2000 {buyToken.symbol}</span>
             </div>
@@ -143,7 +143,7 @@ export function SwapWidget() {
             )}
           </div>
           
-          <div className="group bg-black/20 backdrop-blur-sm rounded-xl p-4 border border-white/5 hover:border-white/10 transition-all duration-200 focus-within:border-emerald-400/50 focus-within:ring-2 focus-within:ring-emerald-400/20">
+          <div className="group bg-black/20 backdrop-blur-sm rounded-xl p-4 border border-white/5 hover:border-white/10 transition-all duration-200 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20">
             <div className="flex items-center space-x-3">
               <div className="flex-1">
                 <Input
@@ -164,7 +164,7 @@ export function SwapWidget() {
               <Button
                 className={`backdrop-blur-sm transition-all duration-200 hover:shadow-lg hover:scale-105 focus-visible-emerald active:scale-95 px-4 py-2 ${
                   buyToken.symbol 
-                    ? 'bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white' 
+                    ? 'bg-gradient-to-r from-primary to-primary hover:from-primary hover:to-primary text-white' 
                     : 'bg-white/10 hover:bg-white/15 border border-white/20 text-gray-300'
                 }`}
                 aria-label={buyToken.symbol ? `Selected token: ${buyToken.name}` : "Select token to buy"}
@@ -173,7 +173,7 @@ export function SwapWidget() {
                   {buyToken.symbol ? (
                     <>
                       <div
-                        className="w-5 h-5 rounded-full bg-gradient-to-br from-emerald-300 to-green-500"
+                        className="w-5 h-5 rounded-full bg-gradient-to-br from-primary to-primary"
                         aria-hidden="true"
                       ></div>
                       <span className="font-medium">{buyToken.symbol}</span>
@@ -192,7 +192,7 @@ export function SwapWidget() {
         <Button
           onClick={handleSwap}
           disabled={!hasValidSwap || isSwapping}
-          className="w-full bg-gradient-to-r from-emerald-500 via-green-600 to-teal-600 hover:from-emerald-600 hover:via-green-700 hover:to-teal-700 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white font-semibold py-4 shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] focus-visible-emerald active:scale-[0.98] disabled:scale-100"
+          className="w-full bg-gradient-to-r from-primary via-primary to-accent hover:from-primary hover:via-primary hover:to-accent disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white font-semibold py-4 shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] focus-visible-emerald active:scale-[0.98] disabled:scale-100"
           aria-label={isSwapping ? "Processing swap..." : hasValidSwap ? `Swap ${sellAmount} ${sellToken.symbol} for ${buyAmount} ${buyToken.symbol}` : "Enter amount and select token to swap"}
         >
           {isSwapping ? (

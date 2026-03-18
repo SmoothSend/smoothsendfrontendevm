@@ -676,7 +676,7 @@ export function GaslessTransferWidget() {
   // If transfer was successful, show result
   if (transferResult && currentTokenConfig) {
     return (
-      <Card className="w-full max-w-lg mx-auto bg-black/40 backdrop-blur-3xl border-2 border-[#0db059]/40 shadow-2xl shadow-[#0db059]/30">
+      <Card className="w-full max-w-lg mx-auto phantom-card">
         <div className="p-6 space-y-6">
           <div className="text-center space-y-2">
             <div className="relative w-16 h-16 mx-auto">
@@ -742,7 +742,7 @@ export function GaslessTransferWidget() {
   }
 
   return (
-    <Card className="w-full max-w-lg mx-auto bg-black/40 backdrop-blur-3xl border border-white/10 shadow-2xl shadow-black/50 hover:border-emerald-500/30 transition-all duration-300">
+    <Card className="w-full max-w-lg mx-auto phantom-card">
       <div className="p-6 space-y-6">
         {/* Header */}
         <div className="text-center space-y-2">
@@ -761,7 +761,7 @@ export function GaslessTransferWidget() {
             <Button
               onClick={connectWallet}
               disabled={isConnecting}
-              className="w-full bg-gradient-to-r from-[#10b981] via-[#14b8a6] to-[#06b6d4] hover:from-[#059669] hover:via-[#0f9b8e] hover:to-[#0891b2] text-white font-semibold py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
+              className="w-full phantom-button py-3 rounded-lg"
             >
               {isConnecting ? (
                 <>
@@ -848,12 +848,12 @@ export function GaslessTransferWidget() {
                     placeholder="0x..."
                     value={recipientAddress}
                     onChange={(e) => setRecipientAddress(e.target.value)}
-                    className="bg-black/20 border-white/10 text-white placeholder-gray-500 focus:border-emerald-400/50 focus:ring-emerald-400/20"
+                    className="bg-black/20 border-white/10 text-white placeholder-gray-500 focus:border-primary/50 focus:ring-primary/20"
                   />
                   {recipientAddress && (
                     <div className="absolute right-3 top-1/2 -translate-y-1/2">
                       {isValidRecipient ? (
-                        <CheckCircle className="w-4 h-4 text-emerald-400" />
+                        <CheckCircle className="w-4 h-4 text-primary" />
                       ) : (
                         <AlertTriangle className="w-4 h-4 text-yellow-400" />
                       )}
@@ -886,7 +886,7 @@ export function GaslessTransferWidget() {
                       setTransferAmount(e.target.value)
                       setCurrentQuote(null) // Clear quote when amount changes
                     }}
-                    className="bg-black/20 border-white/10 text-white placeholder-gray-500 focus:border-emerald-400/50 focus:ring-emerald-400/20 text-lg font-semibold"
+                    className="bg-black/20 border-white/10 text-white placeholder-gray-500 focus:border-primary/50 focus:ring-primary/20 text-lg font-semibold"
                     min="0"
                     step={currentTokenConfig?.decimals === 6 ? "0.01" : "0.0001"}
                   />
@@ -898,8 +898,8 @@ export function GaslessTransferWidget() {
 
               {/* Quote Info */}
               {currentQuote && currentTokenConfig && (
-                <div className="bg-emerald-950/20 border border-emerald-500/20 rounded-xl p-4 space-y-2">
-                  <div className="flex items-center gap-2 text-emerald-400 font-semibold">
+                <div className="bg-primary/20 border border-primary/20 rounded-xl p-4 space-y-2">
+                  <div className="flex items-center gap-2 text-primary font-semibold">
                     <Info className="w-4 h-4" />
                     Transfer Quote
                   </div>
@@ -916,9 +916,9 @@ export function GaslessTransferWidget() {
                         {formatTokenAmount(currentQuote.relayerFee, currentTokenConfig.decimals)} {selectedToken}
                       </span>
                     </div>
-                    <div className="flex justify-between font-semibold border-t border-emerald-500/20 pt-1 mt-2">
-                      <span className="text-emerald-400">Total Deducted:</span>
-                      <span className="text-emerald-400">
+                    <div className="flex justify-between font-semibold border-t border-primary/20 pt-1 mt-2">
+                      <span className="text-primary">Total Deducted:</span>
+                      <span className="text-primary">
                         {formatTokenAmount(currentQuote.total, currentTokenConfig.decimals)} {selectedToken}
                       </span>
                     </div>
@@ -931,7 +931,7 @@ export function GaslessTransferWidget() {
                 <Button
                   onClick={getQuote}
                   disabled={!hasValidInputs || isGettingQuote}
-                  className="flex-1 bg-gradient-to-r from-teal-500 to-emerald-600 hover:from-teal-600 hover:to-emerald-700 text-white"
+                  className="flex-1 bg-gradient-to-r from-accent to-primary hover:from-accent hover:to-primary text-white"
                 >
                   {isGettingQuote ? (
                     <>
@@ -947,7 +947,7 @@ export function GaslessTransferWidget() {
                   <Button
                     onClick={executeTransfer}
                     disabled={isTransacting}
-                    className="flex-1 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white"
+                    className="flex-1 bg-gradient-to-r from-primary to-primary hover:from-primary hover:to-primary text-white"
                   >
                     {isTransacting ? (
                       <>

@@ -30,10 +30,10 @@ export function StatusNotification() {
       case 'success':
         return {
           icon: <CheckCircle className="w-5 h-5" />,
-          bgColor: 'bg-emerald-950/90',
-          borderColor: 'border-emerald-500/50',
-          textColor: 'text-emerald-300',
-          iconColor: 'text-emerald-400'
+          bgColor: 'bg-primary/90',
+          borderColor: 'border-primary/50',
+          textColor: 'text-primary',
+          iconColor: 'text-primary'
         }
       case 'error':
         return {

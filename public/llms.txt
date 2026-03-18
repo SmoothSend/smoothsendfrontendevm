@@ -1,0 +1,35 @@
+# SmoothSend
+
+SmoothSend is a gasless stablecoin payment protocol for Web3 developers.
+It enables USDC and USDT transfers on Aptos, Arbitrum, Base, and Avalanche
+without requiring users to hold native gas tokens (ETH or APT).
+
+SmoothSend uses ERC-4337 account abstraction on EVM chains and Aptos native
+sponsored transactions. A 0.25% relayer fee is deducted from the sent amount.
+Testnet usage is free.
+
+## SDK
+
+npm: https://www.npmjs.com/package/@smoothsend/sdk
+Install: npm install @smoothsend/sdk
+
+## Documentation
+
+https://docs.smoothsend.xyz
+
+## Dashboard (API Keys)
+
+https://dashboard.smoothsend.xyz
+
+## dApps
+
+- EVM (Base, Arbitrum, Avalanche): https://evm.smoothsend.xyz
+- Aptos: https://aptos.smoothsend.xyz
+
+## GitHub
+
+https://github.com/smoothsend
+
+## Social
+
+https://x.com/smoothsend

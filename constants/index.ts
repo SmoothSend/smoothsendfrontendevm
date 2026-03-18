@@ -2,7 +2,7 @@
 
 // Relayer API Configuration
 export const API_CONFIG = {
-  RELAYER_URL: process.env.NEXT_PUBLIC_RELAYER_URL || 'http://localhost:3000',
+  RELAYER_URL: process.env.NEXT_PUBLIC_RELAYER_URL || 'http://localhost:3001',
   BASE_PATH: '/api/v1/relayer',
   TIMEOUT: 30000,
   RETRY_ATTEMPTS: 3,
@@ -200,13 +200,7 @@ export const getTokensByChain = (chainKey: keyof typeof NETWORKS) => {
 };
 
 export const getRelayerEndpoint = (path: string) => {
-  const baseUrl = typeof window !== 'undefined' 
-    ? window.location.hostname === 'localhost'
-      ? 'http://localhost:3000'
-      : (process?.env?.NEXT_PUBLIC_RELAYER_URL || 'http://localhost:3000')
-    : 'http://localhost:3000';
-  
-  return `${baseUrl}${API_CONFIG.BASE_PATH}${path}`;
+  return `${API_CONFIG.RELAYER_URL}${API_CONFIG.BASE_PATH}${path}`;
 };
 
 export const formatTokenAmount = (amount: string, decimals: number): string => {

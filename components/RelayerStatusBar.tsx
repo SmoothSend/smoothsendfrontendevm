@@ -27,9 +27,7 @@ export const RelayerStatusBar: React.FC = () => {
 
   const checkRelayerStatus = async () => {
     try {
-      const baseUrl = typeof window !== 'undefined' && window.location.hostname === 'localhost'
-        ? 'http://localhost:3000'
-        : API_CONFIG.RELAYER_URL;
+      const baseUrl = API_CONFIG.RELAYER_URL;
       
       const response = await fetch(`${baseUrl}${API_CONFIG.BASE_PATH}/health`, {
         method: 'GET',

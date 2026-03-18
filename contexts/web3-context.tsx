@@ -4,17 +4,9 @@ import React, { createContext, useContext, useState, useEffect, useCallback, Rea
 import { ethers } from 'ethers'
 import { API_CONFIG, NETWORKS, TOKENS, DEFAULTS } from '@/constants'
 
-// Get relayer API URL
-const getRelayerUrl = () => {
-  if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
-    return 'http://localhost:3000'
-  }
-  return process.env.NEXT_PUBLIC_RELAYER_URL || 'http://localhost:3000'
-}
-
 // Configuration - SmoothSend multi-chain setup
 const CONFIG = {
-    RELAYER_API: getRelayerUrl(),
+    RELAYER_API: API_CONFIG.RELAYER_URL,
     // Default to Base Sepolia
     CHAIN_ID: NETWORKS.BASE_SEPOLIA.chainId,
     CHAIN_NAME: NETWORKS.BASE_SEPOLIA.name,
